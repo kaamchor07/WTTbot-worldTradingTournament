@@ -1,0 +1,109 @@
+/usr/lib/python3/dist-packages/requests/__init__.py:87: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (4.0.0) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+[H[2J[3J⚠️  'rich' library not available. Install with: pip install rich
+    Falling back to simple text display
+
+╔══════════════════════════════════════════════════════════════╗
+║                                                              ║
+║          🏆  TRADING COMPETITION SCANNER  🏆                 ║
+║                                                              ║
+║        Multi-Timeframe Analysis & Signal Generation         ║
+║                                                              ║
+╚══════════════════════════════════════════════════════════════╝
+
+⚙️  Configuration:
+   • Scan Timeframe: 5m
+   • Confirm Timeframe: 15m
+   • Trend Timeframe: 1h
+   • Top N Signals: 20
+   • Scan Interval: 60s
+   • Test Mode: Yes (10 symbols)
+
+✓ Loaded 169 symbols
+📊 Loaded 169 symbols
+✓ Loaded 169 symbols
+✓ Loaded 169 symbols
+
+================================================================================
+🔄 Scan #1 - 2026-01-25 11:53:14
+================================================================================
+
+
+============================================================
+🔍 MULTI-TIMEFRAME SCANNER
+============================================================
+Scanning 10 symbols across 5m, 15m, 1h...
+
+📊 Fetching 5m data (last update: 1769322195s ago)...
+📊 Fetching 10 symbols on 5m timeframe...
+   Strategy: 30 symbols/batch, 2.0s delay between batches
+
+   Batch 1/1 (10 symbols)...
+   ✓ Batch 1: 10/10 successful
+
+✓ Total: 10/10 symbols (100.0%) in 1.83s
+
+📊 Fetching 15m data (last update: 1769322195s ago)...
+📊 Fetching 10 symbols on 15m timeframe...
+   Strategy: 30 symbols/batch, 2.0s delay between batches
+
+   Batch 1/1 (10 symbols)...
+   ✓ Batch 1: 10/10 successful
+
+✓ Total: 10/10 symbols (100.0%) in 1.99s
+
+📊 Fetching 1h data (last update: 1769322195s ago)...
+📊 Fetching 10 symbols on 1h timeframe...
+   Strategy: 30 symbols/batch, 2.0s delay between batches
+
+   Batch 1/1 (10 symbols)...
+   ✓ Batch 1: 10/10 successful
+
+✓ Total: 10/10 symbols (100.0%) in 1.81s
+
+🔬 Analyzing signals...
+
+✓ Found 10 signals (score > 30)
+
+========================================================================================================================
+                                         🎯 TOP TRADING OPPORTUNITIES - 11:53:20                                         
+========================================================================================================================
+#   Ticker   Signal Score  Entry        SL Points  TP Points  R:R      Timeframes     
+------------------------------------------------------------------------------------------------------------------------
+1   DJIUSD   SELL   80     49014.2000   45.6       91.2       2.0:1    5m↓ 15m↓ 1h↓   
+2   ETHGBP   SELL   70     2151.9120    4.1        8.2        2.0:1    5m↓ 15m↓ 1h↓   
+3   ASXAUD   BUY    65     8871.9000    6.7        13.5       2.0:1    5m↑ 15m↑ 1h↑   
+4   DAXEUR   NEUTRAL 50     24886.2800   -19.1      -19.1      1.0:1    5m↓ 15m→ 1h↑   
+5   F40EUR   NEUTRAL 50     8149.0000    -6.3       -6.3       1.0:1    5m→ 15m↑ 1h→   
+6   FTSGBP   NEUTRAL 50     10150.7000   -8.4       -8.4       1.0:1    5m↑ 15m↑ 1h→   
+7   NDXUSD   NEUTRAL 50     25550.4000   -30.1      -30.1      1.0:1    5m↓ 15m↓ 1h↑   
+8   HSIHKD   NEUTRAL 40     26756.3000   -38.8      -38.8      1.0:1    5m→ 15m↑ 1h↓   
+9   IBXEUR   NEUTRAL 40     17560.3000   -17.0      -17.0      1.0:1    5m↑ 15m→ 1h→   
+10  ESXEUR   NEUTRAL 35     5946.6000    -4.9       -4.9       1.0:1    5m↓ 15m→ 1h→   
+========================================================================================================================
+NOTE: SL Points = Stop-Loss distance in points, TP Points = Take-Profit distance in points
+      Enter these point values directly in your platform's SL/TP fields
+========================================================================================================================
+
+
+============================================================
+SUMMARY
+============================================================
+Total Signals: 10
+Buy Signals: 1
+Sell Signals: 2
+Average Score: 53.0
+Top Score: 80.0 (DJIUSD)
+============================================================
+
+
+💾 Signals saved to: signals_20260125_115320.txt
+
+✓ Single scan complete. Exiting.
+
+================================================================================
+📊 Total scans completed: 1
+================================================================================
+
+✓ Trading Competition Scanner finished
+
