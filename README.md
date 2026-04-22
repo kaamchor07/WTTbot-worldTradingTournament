@@ -2,7 +2,6 @@
 
 Multi-timeframe trading analysis system for World Trading Tournament competition.
 
-## 🚀 Quick Start (Competition Day)
 # WTT Suggestion Scanner (Suggestion-only)
 
 This repository provides a suggestion engine that continuously (or on-demand) fetches market data, computes technical indicators, scores symbols, and outputs ranked suggestions for manual review. Automatic order execution (auto-trading) has been removed.
@@ -49,7 +48,7 @@ Optional (for nicer terminal output):
 pip install rich
 ```
 
-## Files kept (and what they do)
+## Files 
 
 - `config.py` — API credentials, symbol lists, timeframes, and tunable parameters
 - `update_tokens.py` — Helper to refresh API tokens
@@ -61,18 +60,6 @@ pip install rich
 - `dashboard.py` — Terminal display logic for suggestions
 - `main.py` — CLI runner / orchestrator
 - `symbols_auto_mapped.json`, `symbols_crypto_only.json` — symbol maps
-
-## What I removed
-
-Removed files related to automatic trading execution and their docs:
-
-- `auto_trader.py`
-- `auto_trader_interactive.py`
-- `AUTO_TRADER_GUIDE.md`
-- `AUTO_TRADER_SETUP.md`
-- `AUTO_TRADER_TEST.md`
-
-Additionally, runtime `logs/` and Python cache directories were deleted from the workspace.
 
 ## Configuration
 
@@ -94,16 +81,6 @@ Edit `config.py` to customize:
 
 - The scanner computes multi-timeframe alignment and momentum indicators, then ranks symbols by a composite score.
 - The codebase is intentionally split: fetching, indicator calculations, scanning logic, and presentation are modular.
-
-## Next steps (offer)
-
-- I can archive the removed logs into a zip before permanent deletion.
-- I can further prune docs or consolidate the scanner into a single CLI script.
-- I can expand this README with sample outputs, configuration examples, and developer notes.
-
----
-
-If you want any deleted files restored or prefer a different cleanup scope, tell me which files and I will revert or archive them.
 
 ## Full Guide — Usage, Tokens, and Configuration
 
@@ -137,10 +114,6 @@ The scanner requires valid API credentials to fetch market data. There are two s
 - Recommended: use `update_tokens.py` which helps fetch and write required tokens into `config.py` or a local `.env` that `config.py` reads.
 - Manual: copy the `Authorization` Bearer header and any `tradetoken` JWT from your browser's DevTools (Network tab) when you make a request to the exchange's API (e.g., a `tradequote` request). Paste those values into `config.py` fields: `AUTHORIZATION` and `TRADETOKEN` (or follow the variable names used in your `config.py`).
 
-Important security notes:
-
-- Never commit tokens to version control. Use `.gitignore` (already added) to exclude `.env` or other token files.
-- Keep tokens restricted and rotate them if leaked.
 
 Example `config.py` snippet (safe pattern — prefer environment variables):
 
@@ -226,10 +199,3 @@ Score guidance:
 - The code is modular (fetch -> indicators -> scan -> display). To change scoring, edit `scanner.py`.
 - To add new indicators, implement them in `indicators.py` and integrate into the scoring function.
 
----
-
-If you want, I can now:
-
-- Expand the README with sample run outputs and annotated examples, or
-- Create a `requirements.txt` and a small `examples/` folder with sample outputs, or
-- Archive removed docs into a zip and upload it into the repo for safekeeping.
